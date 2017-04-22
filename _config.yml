@@ -40,3 +40,5 @@ sass:
 username: johnsen
 branch: master
 repo: blog
+
+theme: jekyll-theme-cayman
