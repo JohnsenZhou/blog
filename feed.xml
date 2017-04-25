@@ -7,6 +7,18 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Hello Jekyll</title>
+        
+        
+          <description>&lt;p&gt;这个博客通过&lt;strong&gt;Jekyll&lt;/strong&gt;搭建，发现刚刚尝试&lt;strong&gt;Jekyll&lt;/strong&gt;就被他优美简洁的页面布局以及简单的搭建、发布流程、支持Markdown发布文章给吸引。&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 25 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/Hello-Jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Hello-Jekyll</guid>
+      </item>
+    
+      <item>
         <title>MacDown</title>
         
         
