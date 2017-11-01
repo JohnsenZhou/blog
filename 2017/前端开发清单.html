@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>前端开发清单 - Johnsen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	
+	<link rel="canonical" href="http://localhost:4000/2017/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%B8%85%E5%8D%95">
+	<link rel="alternate" type="application/rss+xml" title="Subscribe Feed" href="/feed.xml">
+	<link  href="/css/app.css" rel="stylesheet" media="all">
+	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href='//fonts.useso.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'> -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?3971043c66464212dfe9a4dedb68d865";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+    <!--[if lt IE 9]>
+    <script>window.location.href="http://browsehappy.com"</script>
+    <![endif]-->
+</head>
+
+<body>
+
+<header id="header" role="banner">
+	<div class="header-inner">
+	
+		<a href="/" class="blog-title home">Johnsen</a>
+		<div>
+	<a href="//github.com/JohnsenZhou" class="social-link">
+		<i class="fa fa-github"></i>
+	</a>
+
+	<a href="//500px.com/296240671" class="social-link">
+		<i class="fa fa-500px"></i>
+	</a>
+</div>
+	
+	</div>
+	<a href="/feed.xml" data-tip="true" data-tip-content="订阅" class="tip--top subscribe">
+		<i class="fa fa-rss"></i>
+	</a>
+</header>
+
+<main class="fluid" role="main">
+  <article class="post" role="article">
+    <header class="post-header">
+      <h1 class="post-title">前端开发清单</h1>
+    </header>
+    <section class="post-content">
+      <h1>前端开发清单</h1>
+
+<p><a href="https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/Front-End-Checklist/Lobby.svg" alt="Join the chat at https://gitter.im/Front-End-Checklist/Lobby"></a>
+<a href="https://github.com/thedaviddias/Front-End-Checklist/"><img src="https://img.shields.io/badge/Front%E2%80%91End_Checklist-followed-brightgreen.svg" alt="Front‑End_Checklist followed"></a>
+<a href="https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors"><img src="https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg" alt="Contributors"></a>
+<a href="https://stackshare.io/thedaviddias/front-end-checklist"><img src="https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat" alt="StackShare"></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/license-CC0-green.svg" alt="CC0"></a></p>
+
+<p><strong>前端开发清单</strong>是一份在站点/HTML页面发布到生产环境之前需要测试的所有元素的详尽列表。</p>
+
+<p>它基于前端开发人员多年的经验沉淀，以及其他优秀的开源清单。</p>
+
+<p><em>在Product Hunt上投票或推荐来帮助</em><em>前端开发清单</em><em>的推广🌈。</em></p>
+
+<p><a href="https://www.producthunt.com/posts/front-end-checklist"><img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508896898/upvote-producthunt_vzys4c.jpg" alt=""></a></p>
+
+<h2>目录</h2>
+
+<ol>
+<li><strong><a href="#head">Head</a></strong></li>
+<li><strong><a href="#html">HTML</a></strong></li>
+<li><strong><a href="#webfonts">Webfonts</a></strong></li>
+<li><strong><a href="#css">CSS</a></strong></li>
+<li><strong><a href="#images">Images</a></strong></li>
+<li><strong><a href="#javascript">JavaScript</a></strong></li>
+<li><strong><a href="#security">Security</a></strong></li>
+<li><strong><a href="#performance">Performance</a></strong></li>
+<li><strong><a href="#accessibility">Accessibility</a></strong></li>
+<li><strong><a href="#seo">SEO</a></strong></li>
+</ol>
+
+<h2>How to use?</h2>
+
+<p><strong>前端开发清单</strong>中的所有项目都是大部分项目所必需的, 但某些元素可以省略或者并不是这么重要 (在管理Web应用程序的情况下，你可能并不需要RSS订阅源)。我们选择使用一下3级区分:</p>
+
+<ul>
+<li><img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 意味着该项目被<strong>推荐</strong>，但在某些特定情况下可以省略。</li>
+<li><img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 意味着该项目是<strong>强烈推荐</strong>的，但是可能在某些特殊情况下能被省略。某些元素，如果省略将会对性能或SEO方面产生不良影响。</li>
+<li><img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 意味着项目<strong>不能被任何理由忽略</strong>。忽略可能会导致你的页面部分功能障碍或者产生可访问性以及SEO等问题。测试优先级需要首先考虑这些元素。</li>
+</ul>
+
+<p>某些资源拥有特定的标识符，帮助你去理解清单上不同类型的内容或帮助。</p>
+
+<ul>
+<li>📖: 文档或文章</li>
+<li>🛠: 在线工具/测试工具</li>
+<li>📹: 媒体或视频内容</li>
+</ul>
+
+<hr>
+
+<h2>Head</h2>
+
+<blockquote>
+<p><strong>注意:</strong> 你能在<a href="https://github.com/joshbuchea/HEAD">HEAD列表</a>中找到HTML文档<code>&lt;head&gt;</code>标签内所有可配置的属性。</p>
+</blockquote>
+
+<h3>Meta 标签</h3>
+
+<ul>
+<li>[ ] <strong>Doctype（档案类型）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> Doctype是HTML5，需要声明在HTML文件的顶部。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Doctype HTML5 --&gt;</span>
+<span class="cp">&lt;!doctype html&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>📖 <a href="https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding">Determining the character encoding - HTML5 W3C</a></li>
+</ul>
+</blockquote>
+
+<p><em>接下来三个 meta 标签 (Charset, X-UA Compatible, Viewport) 需要首先在head中声明</em></p>
+
+<ul>
+<li><p>[ ] <strong>Charset（字符类型）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 正确声明<code>Charset</code> meta(UTF-8)。
+<code>html
+&lt;!-- 设置文档的字符编码 --&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+</code></p></li>
+<li><p>[ ] <strong>X-UA-Compatible（IE相关设定）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 正确声明<code>X-UA-Compatible</code> meta。</p></li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- 指示Internet Explorer使用其最新的渲染引擎 --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"x-ua-compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>📖 <a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">指定旧文档模式(Internet Explorer)</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Viewport（视口）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 正确声明<code>viewport</code> meta。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- 响应式网页设计viewpoint声明 --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>Title（标题）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都使用<code>title</code>(SEO:Google会计算标题中使用的字符的像素宽度，范围在472和482像素之间，所以平均字符数限制大约在55个字符左右)。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- 文档标题 --&gt;</span>
+<span class="nt">&lt;title&gt;</span>网站标题不超过55个字符<span class="nt">&lt;/title&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>📖 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">Title - HTML - MDN</a></li>
+<li>🛠 <a href="https://www.sistrix.com/serp-snippet-generator/">SERP Snippet Generator</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Description（描述）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 提供<code>description</code>标签， 它是唯一的同时内容不能超过150个字符。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Meta Description --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"Description of the page less than 150 characters"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>📖<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description">Meta Description - HTML - MDN</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Favicons:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 每个<code>favicon</code>都被创建并正确显示，如果你只有一个<code>favicon.ico</code>，把它放在你网站的根目录下。 通常来说你不需要做任何操作他就能正常显示。 然而, 使用一下示例中的方法是比较好的做法。不过现在我们推荐使用<strong>PNG</strong>格式，相比<code>.ico</code>格式有较好的优势(推荐尺寸: 32x32px)。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- 标准favicon --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="na">href=</span><span class="s">"https://example.com/favicon.ico"</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- 推荐favicon格式 --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">type=</span><span class="s">"image/png"</span> <span class="na">href=</span><span class="s">"https://example.com/favicon.png"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>🛠 <a href="https://www.favicon-generator.org/">Favicon 生成器</a></li>
+<li>🛠 <a href="https://realfavicongenerator.net/">RealFaviconGenerator</a></li>
+<li>📖 <a href="https://github.com/audreyr/favicon-cheat-sheet">Favicon Cheat Sheet</a></li>
+<li>📖 <a href="https://css-tricks.com/favicon-quiz/">Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS 技巧</a></li>
+<li>📖 <a href="https://caniuse.com/#feat=link-icon-png">PNG favicons - caniuse</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Apple Touch Icon:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 苹果设备favicon适配。 <em>(创建至少200x200像素尺寸的Apple图标文件以支持你可能需要的用到的所有尺寸)</em></li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Apple Touch Icon --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"/custom-icon.png"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>📖 <a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">配置Web应用程序</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Windows Tiles:</strong><img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> Windows tiles are present and linked.</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Microsoft Tiles --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"msapplication-config"</span> <span class="na">content=</span><span class="s">"browserconfig.xml"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>browserconfig.xml文件的最小所需xml标记如下所示:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;browserconfig&gt;</span>
+   <span class="nt">&lt;msapplication&gt;</span>
+     <span class="nt">&lt;tile&gt;</span>
+        <span class="nt">&lt;square70x70logo</span> <span class="na">src=</span><span class="s">"small.png"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;square150x150logo</span> <span class="na">src=</span><span class="s">"medium.png"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;wide310x150logo</span> <span class="na">src=</span><span class="s">"wide.png"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;square310x310logo</span> <span class="na">src=</span><span class="s">"large.png"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;/tile&gt;</span>
+   <span class="nt">&lt;/msapplication&gt;</span>
+<span class="nt">&lt;/browserconfig&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>📖 <a href="https://msdn.microsoft.com/en-us/library/dn320426(v=vs.85).aspx">浏览器配置模式参考</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Canonical:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 使用<code>rel=&quot;canonical&quot;</code>以避免重复的内容。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- 帮助防止重复内容出现 --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"http://example.com/2017/09/a-new-article-to-red.html"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>📖 <a href="https://support.google.com/webmasters/answer/139066?hl=en">Use canonical URLs - Search Console Help - Google Support</a></li>
+<li>📖 <a href="https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html">5 common mistakes with rel=canonical - Google Webmaster Blog</a></li>
+</ul>
+</blockquote>
+
+<h3>HTML 标签</h3>
+
+<ul>
+<li>[ ] <strong>Language tag（语言标签）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 指定你网站的语言标签并与当前页面语言相关联。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh_cn"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>Direction tag（方向标签）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> <code>direction</code>属性规定元素内容的文本方向。(可以在另一个HTML标签上使用)。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html</span> <span class="na">dir=</span><span class="s">"rtl"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>📖 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir">dir - HTML - MDN</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Alternate language（备用语言）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 指定网站的语言标签并与当前页面的语言相关联。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">href=</span><span class="s">"https://es.example.com/"</span> <span class="na">hreflang=</span><span class="s">"es"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>Alternate language（条件注释）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 如有需要，可针对IE添加条件注释。</li>
+</ul>
+
+<blockquote>
+<p>📖 <a href="https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx">关于条件注释(Internet Explorer) - MSDN - Microsoft</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>RSS feed（RSS 訂閱）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。</li>
+<li></li>
+<li>[ ] <strong>Inline critical CSS（最小 CSS 合集）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> <code>CSS critical</code>收集并呈现当前页面可见部分的核心CSS。在主要的CSS调用渲染之前以单行(最小化)在<code>&lt;style&gt;&lt;/style&gt;</code>中嵌入。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://github.com/addyosmani/critical">Critical by Addy Osmani on GitHub</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>CSS order（加载顺序）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。</li>
+</ul>
+
+<h3>Social meta</h3>
+
+<p>强烈推荐<strong><em>Facebook OG</em></strong> and <strong><em>Twitter Cards</em></strong>。如果你针对某些特定的存在并希望确保显示，也可以考虑其他社交媒体的meta。</p>
+
+<ul>
+<li>[ ] <strong>Facebook Open Graph:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 所有Facebook Open Graph（OG）都经过测试并且没有任何错误。图片至少需要600 x 315像素，建议使用1200 x 630像素。</li>
+</ul>
+
+<blockquote>
+<p><strong>注意:</strong> 使用 <code>og:image:width</code> 和 <code>og:image:height</code> 将会爬取制定尺寸的图像，以便图像能够快速呈现，无需进行异步下载和处理。</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"website"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"https://example.com/page.html"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Content Title"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"https://example.com/image.jpg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Description Here"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"Site Name"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"en_US"</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- Next tags are optional but recommended --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image:width"</span> <span class="na">content=</span><span class="s">"1200"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image:height"</span> <span class="na">content=</span><span class="s">"630"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>📖 <a href="https://developers.facebook.com/docs/sharing/webmasters/">A Guide to Sharing for Webmasters</a></li>
+<li>🛠 使用<a href="https://developers.facebook.com/tools/debug/">Facebook OG testing</a>测试你的页面。</li>
+<li>📖 <a href="https://developers.facebook.com/docs/sharing/best-practices/">Best Practices - Sharing</a></li>
+<li>🛠 Test your page with the <a href="https://developers.facebook.com/tools/debug/">Facebook OG testing</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Twitter Card:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"></li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:card"</span> <span class="na">content=</span><span class="s">"summary"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:site"</span> <span class="na">content=</span><span class="s">"@site_account"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:creator"</span> <span class="na">content=</span><span class="s">"@individual_account"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:url"</span> <span class="na">content=</span><span class="s">"https://example.com/page.html"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:title"</span> <span class="na">content=</span><span class="s">"Content Title"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:description"</span> <span class="na">content=</span><span class="s">"Content description less than 200 characters"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:image"</span> <span class="na">content=</span><span class="s">"https://example.com/image.jpg"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li>📖 <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started">Getting started with cards — Twitter Developers</a></li>
+<li>🛠 使用<a href="https://cards-dev.twitter.com/validator">Twitter card validator</a>测试你的页面。</li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>HTML</h2>
+
+<h3>最佳实践</h3>
+
+<ul>
+<li>[ ] <strong>HTML5 Semantic Elements（HTML5语义化元素）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 正确的使用HTML5语义化标签(header, section, footer, main&hellip;).</li>
+</ul>
+
+<blockquote>
+<p>📖 <a href="http://htmlreference.io/">HTML 参考</a></p>
+</blockquote>
+
+<ul>
+<li><p>[ ] <strong>Error pages（错误页面）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 404页面和5xx错误的存在。5xx错误页面需要集成其CSS(在当前服务器上无外部调用)。</p></li>
+<li><p>[ ] <strong>Noopener:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 如果你使用外部链接<code>target=&quot;_blank&quot;</code>, 你的链接必须有个<code>rel=&quot;noopener&quot;</code>属性，防止制表符的隐藏。如果你需要兼容旧版本的火狐浏览器，请使用<code>rel=&quot;noopener noreferrer&quot;</code>。</p></li>
+</ul>
+
+<blockquote>
+<p>📖 <a href="https://mathiasbynens.github.io/rel-noopener/">关于 rel=noopener</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Clean up comments（清除注释）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 在将页面发布到生产环境之前，应该删除不必要的代码。</li>
+</ul>
+
+<h3>HTML 测试</h3>
+
+<ul>
+<li>[ ] <strong>W3C compliant（兼容）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面需要使用W3C验证器进行测试，以检测HTML代码中的可能存在的问题。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://validator.w3.org/">W3C validator</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>HTML Lint:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 使用工具来帮助我们分析HTML代码中可能存在的问题。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://dirtymarkup.com/">Dirty markup</a></li>
+<li>🛠 <a href="https://sonarwhal.com/">Sonar a linting tool for the web</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Desktop Browsers:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都在桌面浏览器上通过测试(Safari, Firefox, Chrome, Internet Explorer, EDGE&hellip;)。</li>
+<li><p>[ ] <strong>Mobile Browsers:</strong>  <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都在移动端浏览器上通过测试(Native browser, Chrome, Safari&hellip;).</p></li>
+<li><p>[ ] <strong>Link checker（链接检查器）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 页面中链接没有断开，请确认你没有404错误。</p></li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://validator.w3.org/checklink">W3C Link Checker</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li><p>[ ] <strong>Adblockers test（广告拦截器测试）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 你的的网站会在启用广告拦截器的情况下正确显示页面内容(你可以提供一条消息，引导人们停用其广告拦截器)。</p></li>
+<li><p>[ ] <strong>Pixel perfect:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 页面的像素级实现。根据设计稿的质量，你的页面可能做不到100%的还原，但你的网页需要尽可能的靠近设计稿。</p></li>
+</ul>
+
+<blockquote>
+<p><a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en">Pixel Perfect - Chrome 扩展</a></p>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>Webfonts</h2>
+
+<ul>
+<li>[ ] <strong>Webfont format（字体格式）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 现代浏览器都支持WOFF、WOFF2、TTF格式</li>
+</ul>
+
+<blockquote>
+<p><strong>注意:</strong> 使用webfonts可能会导致文档样式闪烁以及文本不可见，所以在使用时需要考虑使用后备字体，或者使用webfont加载器来控制字体加载行为。</p>
+
+<ul>
+<li>📖 <a href="https://caniuse.com/#feat=woff">WOFF - Web Open Font Format - Caniuse</a>.</li>
+<li>📖 <a href="https://caniuse.com/#feat=woff2">WOFF 2.0 - Web Open Font Format - Caniuse</a>.</li>
+<li>📖 <a href="https://caniuse.com/#feat=ttf">TTF/OTF - TrueType and OpenType font support</a></li>
+<li>📖 <a href="https://css-tricks.com/snippets/css/using-font-face/">Using @font-face - CSS-Tricks</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li><p>[ ] <strong>Webfont size（字体大小）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> Webfont大小不超过 2 MB (包括所有版本在内)。</p></li>
+<li><p>[ ] <strong>Webfont loader（字体加载器）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 使用webfont加载器控制加载行为。</p></li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://github.com/typekit/webfontloader">Typekit Web Font Loader</a></li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#table-of-contents">⬆ 返回顶部</a></strong></p>
+
+<h2>CSS</h2>
+
+<blockquote>
+<p><strong>注意:</strong> 大部分前端开发人员都会看看<a href="https://cssguidelin.es/">CSS指南</a>和<a href="https://sass-guidelin.es/">Sass指南</a>。如果你对CSS属性有疑问，可以访问<a href="http://cssreference.io/">CSS参考文档</a>。</p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>响应式网站设计:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 网站使用响应式设计。</li>
+<li>[ ] <strong>CSS打印属性:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 提供打印样式表，并确保使用正确。</li>
+<li>[ ] <strong>预处理器:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 你的网站使用css预处理器(推荐<a href="http://sass-lang.com/">Sass</a>).</li>
+<li>[ ] <strong>唯一ID:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 如果使用了ID，确保ID的唯一性。</li>
+<li>[ ] <strong>Reset CSS:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 使用CSS reset(如reset.css, normalize.css, reboot) <em>(如果你使用的是CSS框架，例如Bootstrap或Foundation，则reset css已被包含在其中)</em></li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://meyerweb.com/eric/tools/css/reset/">Reset.css</a></li>
+<li>📖 <a href="https://necolas.github.io/normalize.css/">Normalize.css</a></li>
+<li>📖 <a href="https://getbootstrap.com/docs/4.0/content/reboot/">Reboot</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>JS 前缀:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 所有以<strong>js-</strong>开头的class(或者JavaScript文件中使用的id)不写入css文件。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"js-slider"</span> <span class="na">class=</span><span class="s">"my-slider"</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- Or --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"id-used-by-cms"</span> <span class="na">class=</span><span class="s">"js-slider my-slider"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>CSS embed or line:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 避免使用CSS嵌入或内联，仅用于必要的情况(例如: background-image for slider, CSS critical).</li>
+<li>[ ] <strong>浏览器内核前缀:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 对部分属性加上浏览器内核前缀，生成你浏览器兼容的属性。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://autoprefixer.github.io/">Autoprefixer CSS online</a></li>
+</ul>
+</blockquote>
+
+<h3>性能</h3>
+
+<ul>
+<li>[ ] <strong>连接:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 将CSS文件连接到一个文件中。 <em>(不适用HTTP/2)</em></li>
+<li>[ ] <strong>压缩:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 压缩所有CSS文件。</li>
+<li>[ ] <strong>非阻塞:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> CSS文件需要非阻塞，以防在DOM加载时花费大量时间。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://github.com/filamentgroup/loadCSS">loadCSS by filament group</a></li>
+<li>📖 <a href="https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf">使用loadCSS预加载CSS的示例</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>未使用的CSS:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 删除未使用的CSS。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://uncss-online.com/">UnCSS Online</a></li>
+<li>🛠 <a href="https://github.com/purifycss/purifycss">PurifyCSS</a></li>
+<li>🛠 <a href="https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage">Chrome DevTools Coverage</a></li>
+</ul>
+</blockquote>
+
+<h3>CSS 测试</h3>
+
+<ul>
+<li><p>[ ] <strong>格式检查:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有的CSS或SCSS文件没有任何格式错误。</p>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://stylelint.io/">stylelint, a CSS linter</a></li>
+<li>📖 <a href="https://sass-guidelin.es/">Sass指南</a></li>
+</ul>
+</blockquote></li>
+<li><p>[ ] <strong>响应式网页设计:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都需要经过以下几种情况的测试: 320px, 768px, 1024px (根据自己的项目情况，可以设置更多)。</p></li>
+<li><p>[ ] <strong>CSS验证器:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> CSS经过测试，同时所有错误都被修复。</p>
+
+<blockquote>
+<p>🛠 <a href="https://jigsaw.w3.org/css-validator/">CSS验证器</a></p>
+</blockquote></li>
+<li><p>[ ] <strong>桌面浏览器:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都在桌面浏览器进行了测试(Safari, Firefox, Chrome, Internet Explorer, EDGE&hellip;)。</p></li>
+<li><p>[ ] <strong>移动端浏览器:</strong>  <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都在移动端浏览器进行了测试(Native browser, Chrome, Safari&hellip;)。</p></li>
+<li><p>[ ] <strong>操作系统:</strong>  <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都在当前操作系统上进行了测试(Windows, Android, iOS, Mac&hellip;)。</p></li>
+<li><p>[ ] <strong>Pixel perfect:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 页面需要像素级实现。根据设计稿的质量，你可能不会100％与设计稿相同，但你的网页需要尽可能的靠近设计稿的要求。</p></li>
+</ul>
+
+<blockquote>
+<p><a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en">Pixel Perfect - Chrome Extension</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Reading direction:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 如果需要的话，所有页面都需要对LTR和RTL语言进行测试。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/">构建RTL-Aware Web Apps &amp; Websites: Part 1 | Mozilla Hacks</a></li>
+<li>📖 <a href="https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/">构建RTL-Aware Web Apps &amp; Websites: Part 2 | Mozilla Hacks</a></li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>Images</h2>
+
+<blockquote>
+<p><strong>注意:</strong> 想要完整的了解图像优化，可以在Addy Osmani查看免费电子书<strong><a href="https://images.guide/">图像优化基础</a></strong>。</p>
+</blockquote>
+
+<h3>最佳实践</h3>
+
+<ul>
+<li>[ ] <strong>优化:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有图像都经过优化并且可在浏览器中正常显示。WebP格式可用于关键页面（如首页）。 All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://github.com/imagemin/imagemin">Imagemin</a></li>
+<li>🛠 使用<a href="https://imageoptim.com/">ImageOptim</a>免费优化您的图像。</li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Picture/Srcset:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 使用Picture/Srcset为用户当前的视口提供最合适的图像。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/">如何使用srcset构建响应式图像</a>。</li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>视网膜屏:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 提供x2 或 3x的图像来支持视网膜屏显示。</li>
+<li>[ ] <strong>雪碧图:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 小图片放到一个雪碧图中。</li>
+<li>[ ] <strong>宽高:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有<code>&lt;img&gt;</code>都需要设置高度和宽度(不要指定px 和 %)。</li>
+<li><p>[ ] <strong>图片描述文本:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有 <code>&lt;img&gt;</code> 必须有<code>alt</code>属性来直观的描述图片（在无障碍网页中尤其重要）。</p>
+
+<blockquote>
+<p>📖 <a href="https://axesslab.com/alt-texts/">Alt-文本: 终极指南</a></p>
+</blockquote></li>
+<li><p>[ ] <strong>懒加载:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 图片懒加载 (A noscript fallback is always provided).</p></li>
+</ul>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>JavaScript</h2>
+
+<h3>最佳实践</h3>
+
+<ul>
+<li>[ ] <strong>JavaScript 内联:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 确保没有任何js代码内联(与HTML代码混合)。</li>
+<li>[ ] <strong>连接:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 将js文件连接起来。</li>
+<li>[ ] <strong>压缩:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 压缩所有js文件(可以添加 <code>.min</code> 后缀)。</li>
+</ul>
+
+<blockquote>
+<p><a href="https://developers.google.com/speed/docs/insights/MinifyResources">压缩资源 (HTML, CSS, and JavaScript)</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>JavaScript安全性:</strong></li>
+</ul>
+
+<blockquote>
+<p><a href="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript">用JavaScript开发安全应用程序指南</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Non-blocking（非阻塞）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> JavaScript文件使用async或延迟使用defer属性异步加载。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://developers.google.com/speed/docs/insights/BlockingJS">Remove Render-Blocking JavaScript</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Modernizr:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 如果您需要指定某些特定功能，则可以使用自定义Modernizr在<code>&lt;html&gt;</code>标签中添加class。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://modernizr.com/download?setclasses">Customize your Modernizr</a></li>
+</ul>
+</blockquote>
+
+<h3>JavaScript 测试</h3>
+
+<ul>
+<li>[ ] <strong>ESLint:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 用ESLint检测并没有错误(基于你的配置规则)。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://eslint.org/">ESLint - The pluggable linting utility for JavaScript and JSX</a></li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ back to top</a></strong></p>
+
+<hr>
+
+<h2>Security</h2>
+
+<h3>扫描并检查你的网站</h3>
+
+<blockquote>
+<ul>
+<li><a href="https://securityheaders.io/">securityheaders.io</a></li>
+<li><a href="https://observatory.mozilla.org/">Observatory by Mozilla</a></li>
+<li><a href="https://asafaweb.com/">ASafaWeb - Automated Security Analyser for ASP.NET Websites</a></li>
+</ul>
+</blockquote>
+
+<h3>最佳实践</h3>
+
+<ul>
+<li>[ ] <strong>HTTPS:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 每个页面和所有外部内容(插件、图像&hellip;)都使用HTTPS。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt - 免费 SSL/TLS 证书</a></li>
+<li>🛠 <a href="https://www.ssllabs.com/ssltest/index.html">免费 SSL 服务测试</a></li>
+<li>📖 <a href="http://caniuse.com/#feat=stricttransportsecurity">Strict Transport Security</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>HTTP严格传输安全性(HSTS):</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> HTTP头设置 &lsquo;Strict-Transport-Security&rsquo;.</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://hstspreload.org/">Check HSTS preload status and eligibility</a></li>
+<li>📖 <a href="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet">HTTP Strict Transport Security Cheat Sheet - OWASP</a></li>
+<li>📖 <a href="https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet">Transport Layer Protection Cheat Sheet - OWASP</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>跨站点请求伪造攻击(CSRF):</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 确保向服务器端发出的请求是合法的，并来自您的网站/应用程序，以防止发生CSRF攻击。</li>
+</ul>
+
+<blockquote>
+<p>📖 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">跨站点请求伪造（CSRF）防范清单 - OWASP</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>跨站脚本攻击(XSS):</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 页面或网站没有XSS攻击的可能性。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS (跨站脚本攻击) 防范清单 - OWASP</a></li>
+<li>📖 <a href="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">基于DOM的XSS防范清单 - OWASP</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Content Type Options</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 防止Google Chrome和Internet Explorer尝试将响应的内容类型从服务器声明的内容类型中嗅探出来。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options">X-Content-Type-Options - Scott Helme</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>X-Frame-Options (XFO)（外部框架连接设定）</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 保护网站的访问者免受劫持攻击。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options">X-Frame-Options - Scott Helme</a></li>
+<li>📖 <a href="https://tools.ietf.org/html/rfc7034">RFC7034 - HTTP Header Field X-Frame-Options</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Content Security Policy（内容安全策略）</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 定义内容如何加载到您的网站上的方式以及允许加载的位置。也可以用来防止劫持攻击。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://scotthelme.co.uk/content-security-policy-an-introduction/">内容安全策略 - 介绍 - Scott Helme</a></li>
+<li>📖 <a href="https://scotthelme.co.uk/csp-cheat-sheet/">CSP Cheat Sheet - Scott Helme</a></li>
+<li>📖 <a href="https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet">CSP Cheat Sheet - OWASP</a></li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>Performance</h2>
+
+<h3>最佳实践</h3>
+
+<ul>
+<li>[ ] <strong>页面大小:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 每张网页的大小在0到500KB之间。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://tools.pingdom.com">Website Page Analysis</a></li>
+<li>📖 <a href="https://evilmartians.com/chronicles/size-limit-make-the-web-lighter">Size Limit: Make the Web lighter</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li><p>[ ] <strong>文件压缩:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 压缩你的HTML文件。</p>
+
+<blockquote>
+<p>🛠 <a href="https://validator.w3.org/">W3C Validator</a></p>
+</blockquote></li>
+<li><p>[ ] <strong>懒加载:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 图片、js脚本和CSS需要懒加载，以提高当前页面的响应时间（请参见各自部分的详细信息）。</p></li>
+<li><p>[ ] <strong>Cookie大小:</strong> 如果使用Cookie，确保每个Cookie不超过4096个字节，并且域名下不超过20个Cookie。</p></li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://tools.ietf.org/html/rfc6265">Cookie规范: RFC 6265</a></li>
+<li>📖 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Cookies</a></li>
+<li>🛠 <a href="http://browsercookielimits.squawky.net/">浏览器Cookie限制</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>第三方组件:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 在可能的情况下，用静态组件替代依赖于外部JS的第三方iframe或组件（如共享按钮），从而限制对外部API的调用，并将用户活动保持为私有。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://simplesharingbuttons.com/">Simple sharing buttons generator</a></li>
+</ul>
+</blockquote>
+
+<h3>为将到来的请求做准备</h3>
+
+<blockquote>
+<p>📖 <a href="https://css-tricks.com/prefetching-preloading-prebrowsing/">以下几种技术的详细说明</a></p>
+
+<ul>
+<li>[ ] <strong>DNS解析:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 使用<code>dns-prefetch</code>让第三方DNS服务商主动去执行域名解析的功能。</li>
+</ul>
+</blockquote>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"dns-prefetch"</span> <span class="na">href=</span><span class="s">"https://example.com"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>预连接:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 使用<code>preconnect</code>在空闲期间提前做好DNS查询, TCP三次握手和TLS 协商。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preconnect"</span> <span class="na">href=</span><span class="s">"https://example.com"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>预获取:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 使用<code>prefetch</code>在空闲期间提前请求即将需要的资源(例如：图像的懒加载)。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"prefetch"</span> <span class="na">href=</span><span class="s">"image.png"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>预加载:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png" alt="Low"> 使用<code>preload</code>提前加载当前页面所需要的资源(例如：js脚本放在<code>&lt;body&gt;</code>的最后)。</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preload"</span> <span class="na">href=</span><span class="s">"app.js"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>📖 <a href="https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf">预加载和预获取之间的差异</a></p>
+</blockquote>
+
+<h3>性能测试</h3>
+
+<ul>
+<li>[ ] <strong>Google PageSpeed:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有的网页都经过测试（不仅仅是首页），而且得分至少为90/100。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed</a></li>
+<li>🛠 <a href="https://testmysite.withgoogle.com">用Google测试移动端速度</a></li>
+<li>🛠 <a href="https://www.webpagetest.org/">WebPagetest - 网站性能和优化测试</a></li>
+<li>🛠 <a href="https://gtmetrix.com/">GTmetrix - Website speed and performance optimization</a></li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>Accessibility</h2>
+
+<blockquote>
+<p><strong>注意:</strong> 查看播放列表<a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">A11ycasts with Rob Dodson</a> 📹</p>
+</blockquote>
+
+<h3>最佳实践</h3>
+
+<ul>
+<li>[ ] <strong>渐进式增强:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 主要功能如主导航和搜索等功能应该在没有启用JavaScript的情况下工作。</li>
+</ul>
+
+<blockquote>
+<p>📖 <a href="https://www.youtube.com/watch?v=kBmvq2cE0D8">在Chrome开发者具中启用/禁用JavaScript</a></p>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>颜色对比度:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 颜色对比度至少通过WCAG AA标准(移动端需要通过AAA)。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="https://leaverou.github.io/contrast-ratio/">Contrast ratio</a></li>
+</ul>
+</blockquote>
+
+<h4>标题</h4>
+
+<ul>
+<li>[ ] <strong>H1:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 所有页面都有H1，它不是网站的标题。</li>
+<li>[ ] <strong>Headings:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 标题应以正确的顺序合理使用(H1至H6)。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📹 <a href="https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">Why headings and landmarks are so important &ndash; A11ycasts #18</a></li>
+</ul>
+</blockquote>
+
+<h4>Landmarks</h4>
+
+<ul>
+<li>[ ] <strong>banner角色:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> <code>&lt;header&gt;</code> 标签中加入 <code>role=&quot;banner&quot;</code>属性。</li>
+<li>[ ] <strong>navigation角色:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> <code>&lt;nav&gt;</code> 标签中加入 <code>role=&quot;navigation&quot;</code>属性。</li>
+<li>[ ] <strong>main角色:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> <code>&lt;main&gt;</code> 标签中加入 <code>role=&quot;main&quot;</code>属性。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page">Using ARIA landmarks to identify regions of a page</a></li>
+</ul>
+</blockquote>
+
+<h3>语义化</h3>
+
+<ul>
+<li>[ ] <strong>使用特定的HTML5输入类型:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 这对于显示不同类型的自定义键盘和小部件的移动设备尤其重要。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="http://mobileinputtypes.com/">Mobile Input Types</a></li>
+</ul>
+</blockquote>
+
+<h3>表单</h3>
+
+<ul>
+<li>[ ] <strong>Label:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> <code>label</code>与每个输入表单元素相关联，如果<code>label</code>无法显示，请使用<code>aria-label</code>代替。</li>
+</ul>
+
+<blockquote>
+<p>📖 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">使用aria-label属性 - MDN</a></p>
+</blockquote>
+
+<h3>Accessibility 测试</h3>
+
+<ul>
+<li>[ ] <strong>Accessibility标准测试:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 使用WAVE工具测试你的页面是否符合accessibility标准。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 <a href="http://wave.webaim.org/">Wave testing</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Keyboard navigation（键盘导航）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 在你的键盘上以可能出现的操作顺序去测试，确保所有交互式元素都可访问和可用。</li>
+<li>[ ] <strong>Screen-reader（屏幕阅读器）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 所有页面都在屏幕阅读器(VoiceOver, ChromeVox, NVDA or Lynx)中进行了测试。</li>
+<li>[ ] <strong>Focus style（专注风格）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 如果焦点被禁用，它将被CSS中的可见状态所替代。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📹 <a href="https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">Managing Focus - A11ycasts #22</a></li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>SEO</h2>
+
+<ul>
+<li>[ ] <strong>Google Analytics:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> Google Analytics 正确安装和配置。</li>
+<li>[ ] <strong>Headings logic:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 标题文字有助于了解当前页面的主要内容。</li>
+<li>[ ] <strong>sitemap.xml:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> <code>sitemap.xml</code>存在并提交到Google Search Console(以前的Google管理员工具)。</li>
+<li>[ ] <strong>robots.txt:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> <code>robots.txt</code>正确配置，不阻止网页被爬取。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>🛠 使用<a href="https://www.google.com/webmasters/tools/robots-testing-tool">Google Robots Testing Tool</a>测试你的<code>robots.txt</code>。 </li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Structured Data（结构化数据）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png" alt="High"> 使用Structured Data的页面通过测试并且没有错误。Structured Data会帮助爬虫理解当前页面的内容。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://developers.google.com/search/docs/guides/intro-structured-data">Structured Data简介 | 搜索 | Google Developers</a></li>
+<li>🛠 使用<a href="https://developers.google.com/structured-data/testing-tool/">Structured Data Testing Tool</a>测试你的页面。</li>
+<li>🛠 适用于结构化数据的完整结构列表<a href="http://schema.org/docs/full.html">Schema.org Full Heirarchy</a></li>
+</ul>
+</blockquote>
+
+<ul>
+<li>[ ] <strong>Sitemap HTML（HTML网站地图）:</strong> <img src="http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png" alt="Medium"> 提供HTML网站地图，可通过网站页脚中的链接进行访问。</li>
+</ul>
+
+<blockquote>
+<ul>
+<li>📖 <a href="https://support.google.com/webmasters/answer/183668?hl=en">Sitemap 指南 | Google 支持</a></li>
+<li>🛠 <a href="https://websiteseochecker.com/html-sitemap-generator/">Sitemap 生成器</a></li>
+</ul>
+</blockquote>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ back to top</a></strong></p>
+
+<hr>
+
+<h2>Translation</h2>
+
+<p>The Front-End Checklist is also available in other languages. Thanks for all translators and their awesome work!</p>
+
+<ul>
+<li>🇯🇵 Japanese: <a href="https://github.com/miya0001/Front-End-Checklist">miya0001/Front-End-Checklist</a></li>
+<li>🇪🇸 Spanish: <a href="https://github.com/eoasakura/Front-End-Checklist-ES">eoasakura/Front-End-Checklist-ES</a></li>
+<li>🇨🇳 Chinese: <a href="https://github.com/JohnsenZhou/Front-End-Checklist">JohnsenZhou/Front-End-Checklist</a></li>
+<li>🇰🇷 Korean: <a href="https://github.com/kesuskim/Front-End-Checklist">kesuskim/Front-End-Checklist</a></li>
+<li>🇧🇷 Portuguese: <a href="https://github.com/jcezarms/Front-End-Checklist">jcezarms/Front-End-Checklist</a></li>
+<li>🇻🇳 Vietnamese: <a href="https://github.com/euclid1990/Front-End-Checklist">euclid1990/Front-End-Checklist</a></li>
+<li>🇹🇼 Traditional Chinese: <a href="https://github.com/EngineLin/Front-End-Checklist">EngineLin/Front-End-Checklist</a></li>
+</ul>
+
+<hr>
+
+<h2>前端开发清单徽章</h2>
+
+<p>如果想显示出你的项目遵循了前端开发清单的各项规定，请将此徽章放在项目的README文件上！</p>
+
+<p>➔ <a href="https://github.com/thedaviddias/Front-End-Checklist/"><img src="https://img.shields.io/badge/Front%E2%80%91End_Checklist-followed-brightgreen.svg" alt="Front‑End_Checklist followed"></a></p>
+<div class="highlight"><pre><code class="language-md" data-lang="md"><span class="p">[</span><span class="nv">![Front‑End_Checklist followed</span><span class="p">](</span><span class="sx">https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg</span><span class="p">)</span>](https://github.com/thedaviddias/Front-End-Checklist/)
+</code></pre></div>
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 返回顶部</a></strong></p>
+
+<hr>
+
+<h2>Contributing</h2>
+
+<p><strong>提issue或提交合并请求以建议更改或添加。</strong></p>
+
+<h3>Guide</h3>
+
+<p><strong>前端开发清单</strong> 项目有两个分支:</p>
+
+<h4>1. <code>master</code></h4>
+
+<p>该分支包含<code>README.md</code>,内容会自动反映到<a href="http://frontendchecklist.com/">前端开发清单</a>。
+网站上。</p>
+
+<h4>2. <code>develop</code></h4>
+
+<p>这个分支将用于对结构和内容进行一些重大更改。不过最好还是使用主分支来修复小错误或添加新项目。</p>
+
+<h3>贡献</h3>
+
+<p>查看所有贡献人员 <a href="https://github.com/thedaviddias/frontendchecklist/graphs/contributors">contributors</a>.</p>
+
+<h2>Support</h2>
+
+<p>如果您有任何问题或建议，可以通过Gitter或Twitter联系我们：</p>
+
+<ul>
+<li><a href="https://gitter.im/Front-End-Checklist/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Chat on Gitter</a></li>
+<li><a href="https://www.facebook.com/frontendchecklist/">Facebook</a></li>
+<li><a href="https://twitter.com/thedaviddias">Twitter</a></li>
+</ul>
+
+<h2>作者</h2>
+
+<p><strong><a href="https://github.com/thedaviddias/Front-End-Checklist">David Dias</a></strong></p>
+
+<h2>License</h2>
+
+<p><a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0"></a></p>
+
+<p><strong><a href="#%E7%9B%AE%E5%BD%95">⬆ 回到顶部</a></strong></p>
+
+    </section>
+    <footer class="post-footer">
+      <div class="post-meta">
+        <time datetime="2017-10-30 00:00:00 +0800" class="updated" pubdate>Oct 30, 2017</time>
+
+        
+<span class="post-tag">
+	
+		<span class="tag">前端资源</span>
+	
+</span>
+
+
+      </div>
+    </footer>
+  </article>
+</main>
+
+<div class="post-comment">
+	<div id="disqus_thread" class="container"></div>
+</div>
+<script>
+function getElementTopLeft(elem) {
+	var top = 0;
+	var left = 0;
+	while(elem) {
+		top += elem.offsetTop;
+		left += elem.offsetLeft;
+
+		elem = elem.offsetParent;
+	}
+	return {top: top, left: left};
+}
+
+var disqus_shortname = 'roshanca';
+var disqus_elem = document.getElementById('disqus_thread');
+var disqus_init = false;
+
+window.onscroll = function () {
+	if (disqus_init) return;
+
+	var viewHeight = document.documentElement.clientHeight;
+	var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+
+	if(getElementTopLeft(disqus_elem).top < viewHeight + scrollY) {
+		loadSync('//' + disqus_shortname + '.disqus.com/embed.js');
+		disqus_init = true;
+	}
+}
+</script>
+
+
+
+<footer id="footer" role="contentinfo">
+	<p>© Copyright 2017 by Johnsen.</p>
+</footer>
+
+<div class="fork-github">
+    <a href="https://github.com/JohnsenZhou">View on GitHub</a>
+</div>
+
+</body>
+</html>
