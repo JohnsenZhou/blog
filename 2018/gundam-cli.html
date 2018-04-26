@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Gundam-cli：前端项目创建发布流程解决方案 - Johnsen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	
+	<link rel="canonical" href="http://localhost:4000/2018/gundam-cli">
+	<link rel="alternate" type="application/rss+xml" title="Subscribe Feed" href="/feed.xml">
+	<link  href="/css/app.css" rel="stylesheet" media="all">
+	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href='//fonts.useso.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'> -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?3971043c66464212dfe9a4dedb68d865";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+    <!--[if lt IE 9]>
+    <script>window.location.href="http://browsehappy.com"</script>
+    <![endif]-->
+</head>
+
+<body>
+
+<header id="header" role="banner">
+	<div class="header-inner">
+	
+		<a href="/" class="blog-title home">Johnsen</a>
+		<div>
+	<a href="//github.com/JohnsenZhou" class="social-link">
+		<i class="fa fa-github"></i>
+	</a>
+
+	<a href="//500px.com/296240671" class="social-link">
+		<i class="fa fa-500px"></i>
+	</a>
+</div>
+	
+	</div>
+	<a href="/feed.xml" data-tip="true" data-tip-content="订阅" class="tip--top subscribe">
+		<i class="fa fa-rss"></i>
+	</a>
+</header>
+
+<main class="fluid" role="main">
+  <article class="post" role="article">
+    <header class="post-header">
+      <h1 class="post-title">Gundam-cli：前端项目创建发布流程解决方案</h1>
+    </header>
+    <section class="post-content">
+      <h1>Gundam-cli：前端项目创建发布流程解决方案</h1>
+
+<p><strong>文档版本号：1.0.0</strong></p>
+
+<blockquote>
+<p>Github地址：<a href="https://github.com/JohnsenZhou/gundam-cli">https://github.com/JohnsenZhou/gundam-cli</a></p>
+</blockquote>
+
+<p><strong>Gundam-cli</strong>是一个前端项目创建发布流程解决方案，通过命令行工具来减少开发流程中的重复劳动。</p>
+
+<p>大多数的前端团队都会有一套自己的开发脚手架，在一个新的项目启动时，至少要进行以下步骤：</p>
+
+<ul>
+<li>从远端仓库克隆脚手架</li>
+<li>改好后推送到新的仓库</li>
+</ul>
+
+<p>当项目数一多，在这些繁琐的工作上所花费的时间也是不容小觑的。</p>
+
+<p>下图是我司在使用cli前后的对比图：</p>
+
+<p><img src="http://os9glxm8s.bkt.clouddn.com/gundam-cli.jpg" alt=""></p>
+
+<blockquote>
+<p>gundam-cli 是在原有为公司开发的cli基础上做了功能拓展，可参见<a href="https://www.npmjs.com/package/317hu-cli">317hu-cli</a>，具体流程类似</p>
+</blockquote>
+
+<h2>开始</h2>
+
+<h3>安装</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">$ npm install -g gundam-cli
+</code></pre></div>
+<h3>使用</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">$ gundam new &lt;project-name&gt;
+</code></pre></div>
+<p>执行后主要有以下需要输入的选项：</p>
+
+<ol>
+<li>仓库类型（github、gitlab）</li>
+<li><p>模板地址</p>
+
+<ol>
+<li>若仓库类型选择github填写格式为：<code>owner/name</code>, 例如 <code>JohnsenZhou/gundam-cli</code></li>
+<li>若仓库类型选择gitlab填写格式为：<code>custom.com:owner/name</code>, 例如<code>gitlab.johnsenzhou.com:example/test-projects</code></li>
+</ol></li>
+<li><p>项目名称（默认<code>project-name</code>）</p></li>
+<li><p>项目版本号（默认为模板的版本号）</p></li>
+<li><p>项目描述</p></li>
+<li><p>开发人员名称</p></li>
+<li><p>是否进行<code>git push</code>操作（若选是，则进行下一项操作，否则跳出，开发人员后续手动进行<code>git</code>操作）</p></li>
+<li><p>输入新项目远端<code>git remote</code> 地址</p></li>
+</ol>
+
+<p>具体操作流程可参见下图：<img src="http://os9glxm8s.bkt.clouddn.com/gundam-cli.gif" alt=""></p>
+
+<h3>开发</h3>
+
+<blockquote>
+<p>gundam-cli为了达到社区的通用性，稍微增加了一部分功能，如果想针对自己公司开发一套对应的cli工具，可以对gundam-cli进行定制</p>
+</blockquote>
+
+<h4>克隆到本地</h4>
+<div class="highlight"><pre><code class="language-" data-lang="">$ git clone https://github.com/JohnsenZhou/gundam-cli.git
+</code></pre></div>
+<h4>软链接`gundam-cli`到开发环境</h4>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cd gundam-cli
+$ npm link
+</code></pre></div>
+<h4>开源支持</h4>
+
+<ul>
+<li><p><a href="https://github.com/tj/commander.js">commander.js</a>：nodejs命令行交互框架</p></li>
+<li><p><a href="https://github.com/SBoudrias/Inquirer.js">inquirer</a>：nodejs交互式命令行工具</p></li>
+<li><p><a href="https://github.com/flipxfx/download-git-repo">download-git-repo</a>：nodejs中获取git项目的工具</p></li>
+<li><p><a href="https://github.com/jprichardson/node-fs-extra">fs-extra</a>：nodejs<code>fs</code>文件系统扩展</p></li>
+</ul>
+
+<h4>文章推荐</h4>
+
+<ul>
+<li><a href="https://blog.npmjs.org/post/118810260230/building-a-simple-command-line-tool-with-npm">Building a simple command line tool with npm</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html">Node.js 命令行程序开发教程</a></li>
+</ul>
+
+<h2>API</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">Usage: gundam &lt;command&gt; [options]
+
+  Options:
+
+    -v, --version  output the version number
+    -h, --help     output usage information
+
+  Commands:
+
+    new &lt;string&gt;   Creates a new application
+</code></pre></div>
+<h2>License</h2>
+
+<p><a href="https://github.com/JohnsenZhou/gundam-cli/blob/master/LICENSE">MIT</a></p>
+
+    </section>
+    <footer class="post-footer">
+      <div class="post-meta">
+        <time datetime="2018-04-26 00:00:00 +0800" class="updated" pubdate>Apr 26, 2018</time>
+
+        
+<span class="post-tag">
+	
+		<span class="tag">前端资源</span>
+	
+</span>
+
+
+      </div>
+    </footer>
+  </article>
+</main>
+
+<div class="post-comment">
+	<div id="disqus_thread" class="container"></div>
+</div>
+<script>
+function getElementTopLeft(elem) {
+	var top = 0;
+	var left = 0;
+	while(elem) {
+		top += elem.offsetTop;
+		left += elem.offsetLeft;
+
+		elem = elem.offsetParent;
+	}
+	return {top: top, left: left};
+}
+
+var disqus_shortname = 'roshanca';
+var disqus_elem = document.getElementById('disqus_thread');
+var disqus_init = false;
+
+window.onscroll = function () {
+	if (disqus_init) return;
+
+	var viewHeight = document.documentElement.clientHeight;
+	var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+
+	if(getElementTopLeft(disqus_elem).top < viewHeight + scrollY) {
+		loadSync('//' + disqus_shortname + '.disqus.com/embed.js');
+		disqus_init = true;
+	}
+}
+</script>
+
+
+
+<footer id="footer" role="contentinfo">
+	<p>© Copyright 2017 by Johnsen.</p>
+</footer>
+
+<div class="fork-github">
+    <a href="https://github.com/JohnsenZhou">View on GitHub</a>
+</div>
+
+</body>
+</html>
